@@ -1,0 +1,25 @@
+JOGO DA VELHA - VERSAO CORRIGIDA UDP (2026)
+
+REQUISITO: Java JDK 21 e NetBeans.
+
+TCP: mantido da versao original que voce confirmou funcionando.
+UDP: reimplementado com interface grafica, sem comandos pelo console.
+
+COMO TESTAR UDP EM UM PC:
+1. No NetBeans: Source Packages > Tela > JogoUdp.java > Run File.
+2. Servidor UDP inicia na porta 9876.
+3. Execute JogoClienteUdp.java > Run File.
+4. No cliente, IP 127.0.0.1, porta 9876, clique Conectar.
+5. Servidor X joga primeiro. Cliente O joga depois.
+6. Nova partida pode ser iniciada em qualquer um dos lados.
+
+EM DOIS COMPUTADORES:
+- No servidor execute JogoUdp.java e permita UDP 9876 no Firewall do Windows.
+- No cliente execute JogoClienteUdp.java, informe IPv4 local do servidor
+  (exemplo 192.168.0.140, se ainda for o endereco atual).
+- Ambos devem estar na mesma rede e sem isolamento entre clientes.
+
+O protocolo usa datagramas UDP com ACK e retransmissao para jogadas,
+mas nao e criptografado nem destinado a uso pela Internet.
+
+Os fontes UDP originais de 2018 estao na pasta original_udp_2018.
